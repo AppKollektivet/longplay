@@ -11,6 +11,7 @@
 		14DBA6F92120827C00D1DBEE /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DBA6F82120827C00D1DBEE /* ContainerViewController.swift */; };
 		14DBA6FE2120827E00D1DBEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14DBA6FD2120827E00D1DBEE /* Assets.xcassets */; };
 		14DBA7012120827E00D1DBEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DBA6FF2120827E00D1DBEE /* LaunchScreen.storyboard */; };
+		14DBA70A2120873E00D1DBEE /* SpotifyAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DBA7092120873E00D1DBEE /* SpotifyAuthentication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,8 @@
 		14DBA6FD2120827E00D1DBEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14DBA7002120827E00D1DBEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14DBA7022120827E00D1DBEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14DBA7092120873E00D1DBEE /* SpotifyAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyAuthentication.framework; path = Frameworks/SpotifyAuthentication.framework; sourceTree = "<group>"; };
+		14DBA70B2120874D00D1DBEE /* Longplay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Longplay-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14DBA70A2120873E00D1DBEE /* SpotifyAuthentication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +42,7 @@
 			children = (
 				14DBA6F52120827C00D1DBEE /* Longplay */,
 				14DBA6F42120827C00D1DBEE /* Products */,
+				14DBA7082120873E00D1DBEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,8 +62,17 @@
 				14DBA6FD2120827E00D1DBEE /* Assets.xcassets */,
 				14DBA6FF2120827E00D1DBEE /* LaunchScreen.storyboard */,
 				14DBA7022120827E00D1DBEE /* Info.plist */,
+				14DBA70B2120874D00D1DBEE /* Longplay-Bridging-Header.h */,
 			);
 			path = Longplay;
+			sourceTree = "<group>";
+		};
+		14DBA7082120873E00D1DBEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14DBA7092120873E00D1DBEE /* SpotifyAuthentication.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +107,7 @@
 				TargetAttributes = {
 					14DBA6F22120827C00D1DBEE = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -268,7 +283,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Longplay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -276,6 +296,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appkollektivet.Longplay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Longplay/Longplay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,7 +307,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Longplay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,6 +320,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.appkollektivet.Longplay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Longplay/Longplay-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
